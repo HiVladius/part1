@@ -9,7 +9,9 @@ const Title = ({course}) =>{
 const Content1 = ({part1, part2, part3}) =>{
   return <p>{part1} {part2} {part3}</p>
 }
-
+const Exercises = ({exercises1, exercises2, exercises3}) =>{
+  return <p>{exercises1} {exercises2} {exercises3} </p>
+}
 
 
 const App = () => {
@@ -24,9 +26,9 @@ const App = () => {
   return (
     <div>
       <Title course={course}/>
-      <Content1 part1={part1 + exercises1}  />
-      <Content1 part2={part2 + exercises2} />
-      <Content1 part3={part3 + exercises3} />
+      <Content1 part1={part1}  /> <Exercises exercises1={exercises1} />
+      <Content1 part2={part2} /> <Exercises exercises2={exercises2} />
+      <Content1 part3={part3} /> <Exercises exercises3={exercises3} />
       
        
       <p>Number of exercises {exercises1 + exercises2 + exercises3}</p>
